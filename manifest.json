@@ -1,0 +1,32 @@
+{
+  "name": "Ike's Nest",
+  "description": "iCIMS Helper Extension",
+  "version": "0.2.1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+   {
+     "matches": ["*://*/icims2/servlet/icims2?module=AppEvent&action=editRule*"],
+     "js": ["custom.js"]
+   }
+ ],
+  "permissions": ["storage", "activeTab", "scripting", "contextMenus"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/ike16.png",
+      "32": "/images/ike32.png",
+      "48": "/images/ike48.png",
+      "128": "/images/ike128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/ike16.png",
+    "32": "/images/ike32.png",
+    "48": "/images/ike48.png",
+    "128": "/images/ike128.png"
+  },
+  "options_page": "options.html"
+}

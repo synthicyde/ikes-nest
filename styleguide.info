@@ -1,0 +1,19 @@
+Primary Colors
+Teal: #48A8AF
+Gold: #F9A84C
+Purple: #A773B0
+Red: #EC1D31
+Gray: #63666A
+White: #FFFFFF
+Black: #000000
+
+Tinted Colors
+Teal: #007D8A
+Gold: #B47E00
+Purple: #7E5475
+Gray: #63666A
+
+Clear CSS
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
