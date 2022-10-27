@@ -18,6 +18,9 @@ I am working on adding greater customizability and some Javascript functionality
 
 ## Version notes
 ### 0.2.1
+- Added the javascript so the Ike and iCIMS logo links to the Care site.
+
+### 0.2.1
 First release version for alpha testing. Main features of this release are very limited. Features are:
 - Quick link to the care site through the iCIMS logo
 - Six quick links to common pages on the care site

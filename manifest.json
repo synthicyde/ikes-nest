@@ -1,7 +1,7 @@
 {
   "name": "Ike's Nest",
   "description": "iCIMS Helper Extension",
-  "version": "0.2.1",
+  "version": "0.2.1b",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
