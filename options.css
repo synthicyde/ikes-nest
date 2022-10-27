@@ -30,72 +30,60 @@ p {
 
 #logo {
     height: 100px;
-    margin: 10px;
+    margin: 10px 10px 10px 20px;
 }
 
 #pop_up_settings {
-    margin: 10px;
+    margin: 0px 10px 10px 20px;
 }
 
-/* The switch - the box around the slider */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
+form {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
 }
 
-/* Hide default HTML checkbox */
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+h1 {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
 }
 
-/* The slider */
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #63666A;
-    -webkit-transition: .4s;
-    transition: .4s;
+h2 {
+    margin: 0px;
+    border: 0px;
+    padding: 0px 0px 10px 0px;
 }
 
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-input:checked + .slider {
+input[type=submit] {
+    border-radius: 10px;
+    border-width: 0px;
+    padding: 8px 24px;
     background-color: #48A8AF;
+    color: #FFFFFF;
 }
 
-input:focus + .slider {
-    box-shadow: 0 0 1px #48A8AF;
+input[type=text] {
+    padding: 6px;
+    width: 25%;
 }
 
-input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    font-size: 1.1em;
 }
 
-/* Rounded sliders */
-.slider.round {
-    border-radius: 34px;
+.footerdiv {
+    margin: auto;
+    width: 400px;
 }
 
-.slider.round:before {
-    border-radius: 50%;
+.footerdiv > p {
+    float: left;
+    width: 100%;
+    padding: .15rem 0px;
+    text-align: center;
 }

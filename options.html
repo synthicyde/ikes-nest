@@ -5,23 +5,32 @@
   </head>
   <body>
 	<div id="noticebar">
-	  <p>This is not an officially supported Chrome extension.</p>
+	  <p>This Chrome extension is not officially supported by iCIMS.</p>
 	</div>
 	<img id="logo" src="images/icims_logo.png">
 	<div id="pop_up_settings">
-    <h1>Pop-Up Settings</h1>
-    <label class="switch" id="show_community_links">
-      <input type="checkbox">
-      <span class="slider round"></span>
-    </label>
-    <form>
+    <form id="bookings_form">
       <h1>Bookings Link</h1>
       <h2>Input your link for MS Bookings</h2>
-      <label class="input" for="bookings"></label>
-      <input type="text" id="bookings" name="bookings">
+      <input type="text" id="bookings" name="bookings" value="">
       <input type="submit" id="bookings_btn">
+    </form>
+    <br/>
+    <form id="portalpass_form">
+      <h1>Portal Password</h1>
+      <h2>Input the current config portal password</h2>
+      <input type="text" id="portalpass" name="portalpass" value="">
+      <input type="submit" id="portalpass_btn">
     </form>
 	</div>
   </body>
+  <footer>
+    <div class="footerdiv" id="footercredits">
+      <p>Extension created by Devon Sherman.</p>
+    </div>
+    <div class="footerdiv" id="footerlink">
+      <p>Maintained on <a href="https://github.com/synthicyde/ikes-nest" target="_blank">GitHub.</a></p>
+    </div>
+  </footer>
   <script src="options.js"></script>
 </html>

@@ -9,7 +9,7 @@
   "content_scripts": [
    {
      "matches": ["*://*/icims2/servlet/icims2?module=AppEvent&action=editRule*"],
-     "js": ["custom.js"]
+     "js": ["scripts.js"]
    }
  ],
   "permissions": ["storage", "activeTab", "scripting", "contextMenus"],
