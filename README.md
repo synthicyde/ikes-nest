@@ -1,4 +1,4 @@
-# ikes-nest-v2
+# Ike's Nest
 This is an ***unofficial*** iCIMS TSE companion extension for Google Chrome.
 
 ## What does this offer?
@@ -15,3 +15,22 @@ Installation is really easy.
 
 ## What's planned for the future
 I am working on adding greater customizability and some Javascript functionality to automate platform tasks.
+
+## Version notes
+### 0.2.1
+First release version for beta testing. Main features of this release are very limited. Features are:
+- Quick link to the care site through the iCIMS logo
+- Six quick links to common pages on the care site
+    - Adding and Editing Fields
+    - Common Definitions of User Licenses
+    - Auto-sourcing
+    - Configuring Office 365
+    - IP and Domains to Allow
+    - Searching & Reporiting Curriculum
+- Three additional links for TSE resources
+    - Job Feed
+    - Standard iForms
+    - VS Widget Types
+
+Problems with this release:
+- The options page effectively does nothing at this time.
