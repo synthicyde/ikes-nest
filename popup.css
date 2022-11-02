@@ -1,5 +1,20 @@
+:root {
+  --icims_primary_teal: #48A8AF;
+  --icims_primary_gold: #F9A84C;
+  --icims_primary_purple: #A773B0;
+  --icims_primary_red: #EC1D31;
+  --icims_primary_gray: #63666A;
+  --icims_primary_white: #FFFFFF;
+  --icims_primary_black: #000000;
+  --icims_tinted_teal: #007D8A;
+  --icims_tinted_gold: #B47E00;
+  --icims_tinted_purple: #7E5475;
+  --icims_tinted_gray: #63666A;
+  --icims_font_family: poppins;
+}
+
 body {
-	font-family:poppins;
+	font-family: var(--icims_font_family);
 	width: 300px;
 }
 
@@ -44,22 +59,22 @@ a {
 
 /* unvisited link */
 a:link {
-  color: #48A8Af;
+  color: var(--icims_primary_teal);
 }
 
 /* visited link */
 a:visited {
-  color: #48A8Af;
+  color: var(--icims_primary_teal);
 }
 
 /* mouse over link */
 a:hover {
-  color: #007D8A;
+  color: var(--icims_tinted_teal);
 }
 
 /* selected link */
 a:active {
-  color: #007D8A;
+  color: var(--icims_tinted_teal);
 }
 
 #search_button {

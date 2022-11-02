@@ -1,5 +1,20 @@
+:root {
+    --icims_primary_teal: #48A8AF;
+    --icims_primary_gold: #F9A84C;
+    --icims_primary_purple: #A773B0;
+    --icims_primary_red: #EC1D31;
+    --icims_primary_gray: #63666A;
+    --icims_primary_white: #FFFFFF;
+    --icims_primary_black: #000000;
+    --icims_tinted_teal: #007D8A;
+    --icims_tinted_gold: #B47E00;
+    --icims_tinted_purple: #7E5475;
+    --icims_tinted_gray: #63666A;
+    --icims_font_family: poppins;
+}
+
 html {
-    font-family: poppins;
+    font-family: var(--icims_font_family);
     margin: 0px;
     border: 0px;
     padding: 0px;
@@ -18,14 +33,14 @@ p {
 }
 
 #noticebar {
-    background-color: #48A8AF;
+    background-color: var(--icims-primary-teal);
     text-align: center;
     font-size: 1.8em;
 }
 
 #noticebar > p {
     padding: 10px;
-    color: white;
+    color: var(--icims_primary_white);
 }
 
 #logo {
@@ -59,8 +74,8 @@ input[type=submit] {
     border-radius: 10px;
     border-width: 0px;
     padding: 8px 24px;
-    background-color: #48A8AF;
-    color: #FFFFFF;
+    background-color: var(--icims_primary_teal);
+    color: var(--icims_primary_white);
 }
 
 input[type=text] {
