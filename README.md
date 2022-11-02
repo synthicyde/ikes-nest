@@ -17,8 +17,10 @@ Installation is really easy.
 I am working on adding greater customizability and some Javascript functionality to automate platform tasks.
 
 ## Version notes
+<!---
 ### 0.2.2
 - Cleaned up CSS for options and popup with variables
+--->
 
 ### 0.2.1.2
 - Added the javascript so the Ike and iCIMS logo links to the Care site.
