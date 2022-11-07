@@ -9,3 +9,18 @@ logo.addEventListener("click", async () => {
 		url: "https://care.icims.com/s/"
 	})
 });
+
+let userLinks = [];
+function pullData(data) {
+	userLinks = data;
+};
+
+fetch("./userlinks.json").then((response) => {
+	return response.json();
+}).then(data => {
+	console.log(data);
+}).catch((err) => {
+	console.log(err);
+});
+
+console.log(userLinks);
