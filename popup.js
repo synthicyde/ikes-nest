@@ -11,16 +11,15 @@ logo.addEventListener("click", async () => {
 });
 
 let userLinks = [];
-function pullData(data) {
-	userLinks = data;
+function pullData() {
+	fetch("./userlinks.json").then((response) => {
+		return response.json();
+	}).then(data => {
+		userLinks = data;
+	}).catch((err) => {
+		console.log(err);
+	});
+	// userLinks = data;
 };
 
-fetch("./userlinks.json").then((response) => {
-	return response.json();
-}).then(data => {
-	console.log(data);
-}).catch((err) => {
-	console.log(err);
-});
-
-console.log(userLinks);
+pullData();
