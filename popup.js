@@ -11,11 +11,6 @@ logo.addEventListener("click", async () => {
 });
 
 let userLinks = [];
-
-// const targetUserLinks = document.getElementById("user_links");
-// const li = document.createElement("li");
-// const a = document.createElement("a");
-
 function createUserLinks() {
 	fetch("./userlinks.json").then((response) => {
 		return response.json();
