@@ -26,14 +26,15 @@ function createUserLinks() {
 			const li = document.createElement("li");
 			const a = document.createElement("a");
 			li.id = "user-link-" + i;
-			let target = "user-link-" + i;
-			a.innertext = userLinks[i].ArticleName;
-			// a.setAttribute("href", userLinks[i]);
-			// a.setAttribute("target", userLinks[i]);
-			console.log(a);
+			let targetDiv = "user-link-" + i;
+			a.id = "user-link-actual-" + i;
+			let targetLink = "user-link-actual-" + i;
 			targetUserLinks.appendChild(li.cloneNode(true));
-			let targetLi = document.getElementById(target);
+			let targetLi = document.getElementById(targetDiv);
 			targetLi.appendChild(a.cloneNode(true));
+			document.getElementById(targetLink).innerHTML = userLinks[i].ArticleName;
+			document.getElementById(targetLink).href = userLinks[i].ArticleURL;
+			document.getElementById(targetLink).target = userLinks[i].target;
 		};
 	}).catch((err) => {
 		console.log(err);
