@@ -17,10 +17,10 @@ Installation is really easy.
 I am working on adding greater customizability and some Javascript functionality to automate platform tasks.
 
 ## Version notes
-<!---
-### 0.2.2
+### 0.3.0.0
 - Cleaned up CSS for options and popup with variables
---->
+- Rebuilt backend so common links are pulled through the chrome storage api
+- Built functionality to set custom bookings link and portal password
 
 ### 0.2.1.2
 - Added the javascript so the Ike and iCIMS logo links to the Care site.
