@@ -1,7 +1,7 @@
 console.log("Ike's Nest Loaded");
 
 // Links for init
-const initalCareLinks = [
+const initCareLinks = [
 	{
 		"ArticleName" : "Adding and Editing Fields",
 		"ArticleURL" : "https://care.icims.com/s/article/Adding-and-Editing-Fields",
@@ -34,13 +34,29 @@ const initalCareLinks = [
 	}	
 ];
 
-
-function initializeLocalStorageLinks() {
-	chrome.storage.sync.set(initalCareLinks);
+const initBookingsLink = {
+	link: ""
 };
 
+const initPortalPass = {
+	password: ""
+};
+
+function initLocalStorageLinks() {
+	chrome.storage.sync.set(initCareLinks);
+};
+
+function initBookingsLink() {
+	chrome.storage.sync.set(initBookingsLink);
+};
+
+function initPortalPass() {
+	chrome.storage.sync.set(initPortalPass);
+};
 
 chrome.runtime.onInstalled.addListener(() => {
 	console.log("Ike's nest has been built on a branch.");
-	initializeLocalStorageLinks();
+	initLocalStorageLinks();
+	initBookingsLink();
+	initPortalPass();
 });
