@@ -44,28 +44,33 @@ chrome.storage.sync.get(["storedUserLinks"], function(result) {
 chrome.storage.sync.get(["storedUserBookings"], function(result) {
 	let bookingsLink = result.storedUserBookings.link;
 	const otherLinks = document.getElementById("other_links");
+	li.id = "bookings_li";
+	a.id = "bookings_a"
+	otherLinks.appendChild(li.cloneNode(true));
 	if (bookingsLink != "") {
-		li.id = "bookings_li";
-		a.id = "bookings_a"
-		otherLinks.appendChild(li.cloneNode(true));
 		document.getElementById("bookings_li").appendChild(a.cloneNode(true));
 		document.getElementById("bookings_a").innerHTML = "Bookings Link";
 		document.getElementById("bookings_a").href = bookingsLink;
 		document.getElementById("bookings_a").target = "_blank"
+	} else {
+		document.getElementById("bookings_li").appendChild(a.cloneNode(true));
+		document.getElementById("bookings_a").innerHTML = "Set bookings link in options";
 	};
 });
 
 chrome.storage.sync.get(["storedUserPortalPass"], function(result) {
 	let portalPass = result.storedUserPortalPass.password;
 	const body = document.getElementById("mainbody");
+	div.id = "portalpass";
+	h1.id = "portalh1"
+	p.id = "portaltext"
+	body.appendChild(div.cloneNode(true));
+	document.getElementById("portalpass").appendChild(h1.cloneNode(true));
+	document.getElementById("portalh1").innerHTML = "Current Portal Pass"
+	document.getElementById("portalpass").appendChild(p.cloneNode(true));
 	if (portalPass != "") {
-		div.id = "portalpass";
-		h1.id = "portalh1"
-		p.id = "portaltext"
-		body.appendChild(div.cloneNode(true));
-		document.getElementById("portalpass").appendChild(h1.cloneNode(true));
-		document.getElementById("portalh1").innerHTML = "Current Portal Pass"
-		document.getElementById("portalpass").appendChild(p.cloneNode(true));
 		document.getElementById("portaltext").innerHTML = portalPass;
-	}
+	} else {
+		document.getElementById("portaltext").innerHTML = "Set portal password in options";
+	};
 });
