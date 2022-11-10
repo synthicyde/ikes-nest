@@ -17,6 +17,9 @@ Installation is really easy.
 I am working on adding greater customizability and some Javascript functionality to automate platform tasks.
 
 ## Version notes
+### 0.3.1.0
+- Added alerts for when the link and password is saved
+
 ### 0.3.0.0
 - Cleaned up CSS for options and popup with variables
 - Rebuilt backend so common links are pulled through the chrome storage api
