@@ -34,29 +34,29 @@ const initCareLinks = [
 	}	
 ];
 
-// const initBookingsLink = {
-// 	link: ""
-// };
-
-// const initPortalPass = {
-// 	password: ""
-// };
-
-function initCareLinksSync() {
-	chrome.storage.sync.set(initCareLinks);
+const initBookingsLink = {
+	link: ""
 };
 
-// function initBookingsLinkSync() {
-// 	chrome.storage.sync.set(initBookingsLink);
-// };
+const initPortalPass = {
+	password: ""
+};
 
-// function initPortalPassSync() {
-// 	chrome.storage.sync.set(initPortalPass);
-// };
+function initCareLinksSync() {
+	chrome.storage.sync.set({"storedUserLinks": initCareLinks});
+};
+
+function initBookingsLinkSync() {
+	chrome.storage.sync.set({"storedUserBookings": initBookingsLink});
+};
+
+function initPortalPassSync() {
+	chrome.storage.sync.set({"storedUserPortalPass": initPortalPass});
+};
 
 chrome.runtime.onInstalled.addListener(() => {
 	console.log("Ike's nest has been built on a branch.");
 	initCareLinksSync();
-	// initBookingsLinkSync();
-	// initPortalPassSync();
+	initBookingsLinkSync();
+	initPortalPassSync();
 });
