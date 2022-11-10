@@ -1,50 +1,48 @@
 const bookingsLink = document.getElementById("bookings_form");
 const portalPassSave = document.getElementById("portalpass_form");
-let saves = {};
-function addToSaves(key, value) {
-	saves[key] = value;
-};
-function loadInfo() {
-	if (saves != {}) {
-		console.log(saves["link"]);
-		console.log(saves["portalPass"]);
-	} else {
-		chrome.storage.sync.get(saves, () => {
-			console.log(saves);
-			console.log(saves[0]);
-			console.log(saves[1]);
-		})
-	}
-};
+// let saves = {};
+// function addToSaves(key, value) {
+// 	saves[key] = value;
+// };
+// function loadInfo() {
+// 	if (saves != {}) {
+// 		console.log(saves["link"]);
+// 		console.log(saves["portalPass"]);
+// 	} else {
+// 		chrome.storage.sync.get(saves, () => {
+// 			console.log(saves);
+// 			console.log(saves[0]);
+// 			console.log(saves[1]);
+// 		})
+// 	}
+// };
 
 bookingsLink.addEventListener("submit", (submission) => {
 	submission.preventDefault();
 	let saveLink = document.getElementById("bookings").value;
-	addToSaves("link", saveLink);
-	console.log(saves);
-	chrome.storage.sync.set(saves);
-	//chrome.storage.sync.set({savedLink: saveLink}, function() {
-	//	console.log("Bookings link saved to storage. Link saved: " + saveLink);
-	//})
+	let moveLink = {link: saveLink};
+	console.log(moveLink);
+	chrome.storage.sync.set({"storedUserBookings": moveLink});
 });
 
 portalPassSave.addEventListener("submit", (submission) => {
 	submission.preventDefault();
 	let savePass = document.getElementById("portalpass").value;
-	addToSaves("portalPass", savePass);
-	console.log(saves);
-	chrome.storage.sync.set(saves);
-	//chrome.storage.sync.set({savedPass: savePass}, function() {
-	//	console.log("Portal password saved to storage. Link saved: " + savePass);
-	//})
+	let movePass = {password: savePass};
+	console.log(movePass);
+	chrome.storage.sync.set({"storedUserPortalPass": movePass});
 });
 
 window.onload = () => {
 	console.log("Page reload.");
-	loadInfo();
-	//chrome.storage.sync.get(["savedLink"], () => {
-	//	console.log(["savedLink"]);
-	//});
-	//chrome.storage.sync.get(["savedPass"]);
-	//console.log("Pulled " + saveLink + savePass);
+	chrome.storage.sync.get(["storedUserBookings"], function(result) {
+		let userBookings = result.storedUserBookings.link;
+		console.log(userBookings);
+		document.getElementById("bookings").setAttribute("value", userBookings);
+	});
+	chrome.storage.sync.get(["storedUserPortalPass"], function(result) {
+		let userPortalPass = result.storedUserPortalPass.password;
+		console.log(userPortalPass);
+		document.getElementById("portalpass").setAttribute("value", userPortalPass)
+	});
 };
