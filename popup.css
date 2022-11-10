@@ -94,3 +94,11 @@ a:active {
   flex-direction: row;
   align-items: center;
 }
+
+p {
+  margin: 0px;
+  border: 0px;
+  padding: 0 0 0 1.35rem;
+  font-weight: 600;
+  font-size: 1.35em;
+}

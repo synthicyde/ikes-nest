@@ -1,21 +1,5 @@
 const bookingsLink = document.getElementById("bookings_form");
 const portalPassSave = document.getElementById("portalpass_form");
-// let saves = {};
-// function addToSaves(key, value) {
-// 	saves[key] = value;
-// };
-// function loadInfo() {
-// 	if (saves != {}) {
-// 		console.log(saves["link"]);
-// 		console.log(saves["portalPass"]);
-// 	} else {
-// 		chrome.storage.sync.get(saves, () => {
-// 			console.log(saves);
-// 			console.log(saves[0]);
-// 			console.log(saves[1]);
-// 		})
-// 	}
-// };
 
 bookingsLink.addEventListener("submit", (submission) => {
 	submission.preventDefault();
