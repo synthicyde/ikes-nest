@@ -4,6 +4,7 @@ const li = document.createElement("li");
 const a = document.createElement("a");
 const h1 = document.createElement("h1");
 const p = document.createElement("p");
+// const portalPassSave = document.getElementById("portal_pass_form");
 
 // Let's the logos at the top lead to the care site
 ike_button.addEventListener("click", async () => {
@@ -74,3 +75,19 @@ chrome.storage.sync.get(["storedUserBookings"], function(result) {
 // 		document.getElementById("portaltext").innerHTML = "Set portal password in options";
 // 	};
 // });
+
+window.onload = () => {
+	chrome.storage.sync.get(["storedUserPortalPass"], function(result) {
+		let userPortalPass = result.storedUserPortalPass.password;
+		console.log(userPortalPass);
+		document.getElementById("portal_pass").setAttribute("value", userPortalPass)
+	});
+};
+
+document.getElementById("portal_pass_form").addEventListener("submit", (submission) => {
+	let savePass = document.getElementById("portal_pass").value;
+	let movePass = {password: savePass};
+	console.log(movePass);
+	chrome.storage.sync.set({"storedUserPortalPass": movePass});
+	alert("Portal pasword saved.")
+});
