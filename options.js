@@ -1,5 +1,4 @@
 const bookingsLink = document.getElementById("bookings_form");
-const portalPassSave = document.getElementById("portalpass_form");
 
 bookingsLink.addEventListener("submit", (submission) => {
 	submission.preventDefault();
@@ -16,10 +15,5 @@ window.onload = () => {
 		let userBookings = result.storedUserBookings.link;
 		console.log(userBookings);
 		document.getElementById("bookings").setAttribute("value", userBookings);
-	});
-	chrome.storage.sync.get(["storedUserPortalPass"], function(result) {
-		let userPortalPass = result.storedUserPortalPass.password;
-		console.log(userPortalPass);
-		document.getElementById("portalpass").setAttribute("value", userPortalPass)
 	});
 };
