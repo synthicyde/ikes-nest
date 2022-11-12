@@ -1,8 +1,13 @@
 {
   "name": "Ike's Nest",
   "description": "iCIMS Helper Extension",
+<<<<<<< HEAD
   "version": "0.3.2.2",
   "version_name":"0.3.2.2 - Beta",
+=======
+  "version": "0.3.2.1",
+  "version_name":"0.3.2.1 - Beta -branch-portal-set-in-popup",
+>>>>>>> 20fae27b92cd8e244bc9c9508d5c3019c05e7670
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
