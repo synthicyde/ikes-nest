@@ -14,9 +14,14 @@ Installation is really easy.
 6. Select the unzipped folder
 
 ## What's planned for the future
-I am working on adding greater customizability and some Javascript functionality to automate platform tasks.
+- Link customizabilty
+- Autosort for Event Notification drop down
+- Custom Salesforce auto-text
 
 ## Version notes
+### 0.3.2.4 - Unreleased
+- Added LinkedIn RSC link to list
+
 ### 0.3.2.3
 - Removed unused password save code from options.js
 
@@ -49,6 +54,5 @@ First release version for alpha testing. Main features of this release are very 
     - Job Feed
     - Standard iForms
     - VS Widget Types
-
-Problems with this release:
-- The options page effectively does nothing at this time.
+- Problems with this release:
+    - The options page effectively does nothing at this time.

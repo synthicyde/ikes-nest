@@ -31,7 +31,12 @@ const initCareLinks = [
 		"ArticleName" : "Searching & Reporting Curriculum",
 		"ArticleURL" : "https://care.icims.com/s/article/Searching-Reporting-Curriculum",
 		"target" : "_blank"
-	}	
+	},
+	{
+		"ArticleName" : "Setting Up the Connector for LinkedIn RSC",
+		"ArticleURL" : "https://care.icims.com/s/article/Setting-Up-the-Connector-for-LinkedIn-Recruiter-System-Connect",
+		"target" : "_blank"
+	}
 ];
 
 const initBookingsLink = {
