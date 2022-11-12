@@ -10,15 +10,6 @@ bookingsLink.addEventListener("submit", (submission) => {
 	alert("Bookings link saved.")
 });
 
-portalPassSave.addEventListener("submit", (submission) => {
-	submission.preventDefault();
-	let savePass = document.getElementById("portalpass").value;
-	let movePass = {password: savePass};
-	console.log(movePass);
-	chrome.storage.sync.set({"storedUserPortalPass": movePass});
-	alert("Portal pasword saved.")
-});
-
 window.onload = () => {
 	console.log("Page reload.");
 	chrome.storage.sync.get(["storedUserBookings"], function(result) {

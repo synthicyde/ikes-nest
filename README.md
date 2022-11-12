@@ -17,6 +17,9 @@ Installation is really easy.
 I am working on adding greater customizability and some Javascript functionality to automate platform tasks.
 
 ## Version notes
+### 0.3.2.3
+- Removed unused password save code from options.js
+
 ### 0.3.2.2
 - Moved the password setting into the pop-up for more streamlined usability
 - Deleted unused files
