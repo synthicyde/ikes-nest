@@ -59,23 +59,6 @@ chrome.storage.sync.get(["storedUserBookings"], function(result) {
 	};
 });
 
-// chrome.storage.sync.get(["storedUserPortalPass"], function(result) {
-// 	let portalPass = result.storedUserPortalPass.password;
-// 	const body = document.getElementById("mainbody");
-// 	div.id = "portalpass";
-// 	h1.id = "portalh1"
-// 	p.id = "portaltext"
-// 	body.appendChild(div.cloneNode(true));
-// 	document.getElementById("portalpass").appendChild(h1.cloneNode(true));
-// 	document.getElementById("portalh1").innerHTML = "Current Portal Pass"
-// 	document.getElementById("portalpass").appendChild(p.cloneNode(true));
-// 	if (portalPass != "") {
-// 		document.getElementById("portaltext").innerHTML = portalPass;
-// 	} else {
-// 		document.getElementById("portaltext").innerHTML = "Set portal password in options";
-// 	};
-// });
-
 window.onload = () => {
 	chrome.storage.sync.get(["storedUserPortalPass"], function(result) {
 		let userPortalPass = result.storedUserPortalPass.password;
