@@ -19,8 +19,10 @@ Installation is really easy.
 - Custom Salesforce auto-text
 
 ## Version notes
-### 0.3.2.4 - Unreleased
+### 0.3.3.0 - Unreleased
 - Added LinkedIn RSC link to list
+- Removed unnecessary permissions from manifest.json for faster validation
+- Deleted unused script.js file
 
 ### 0.3.2.3
 - Removed unused password save code from options.js

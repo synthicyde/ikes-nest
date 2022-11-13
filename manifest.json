@@ -1,19 +1,13 @@
 {
   "name": "Ike's Nest",
   "description": "iCIMS Helper Extension",
-  "version": "0.3.2.4",
-  "version_name":"0.3.2.4 - Beta",
+  "version": "0.3.3.0",
+  "version_name":"0.3.3.0 - Beta",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
-   {
-     "matches": ["*://*/icims2/servlet/icims2?module=AppEvent&action=editRule*"],
-     "js": ["scripts.js"]
-   }
- ],
-  "permissions": ["storage", "activeTab", "scripting", "contextMenus"],
+  "permissions": ["storage"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
