@@ -5,8 +5,10 @@ This is an ***unofficial*** iCIMS TSE companion extension for Google Chrome.
 In the current version, this is mainly used for quick links to some of the most accessed articles on the Care site. These are common articles that are pulled for cases most often. I put them in an extension to make it easy to access.
 
 ## How to install
-Installation is really easy.
-1. Download the repo under releases
+The most recent LTS version can be found on the Chrome Store [here](https://chrome.google.com/webstore/detail/ikes-nest/lkeijgbjmgoljickagjpelnfchepignn).
+
+To download nightly builds:
+1. Download the latest zip under releases
 2. Unzip into a folder
 3. In Chrome, navigate to [chrome://extensions/](chrome://extensions/)
 4. Turn Developer Mode on by selecting the toggle on the top right
@@ -19,10 +21,11 @@ Installation is really easy.
 - Custom Salesforce auto-text
 
 ## Version notes
-### 0.3.3.0 - Unreleased
+### 0.3.3.0
 - Added LinkedIn RSC link to list
 - Removed unnecessary permissions from manifest.json for faster validation
 - Deleted unused script.js file
+- Extension has been published as an unlisted link on the Chrome Store
 
 ### 0.3.2.3
 - Removed unused password save code from options.js
