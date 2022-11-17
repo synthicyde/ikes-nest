@@ -48,7 +48,7 @@ p {
     margin: 10px 10px 10px 20px;
 }
 
-#pop_up_settings {
+#user_settings {
     margin: 0px 10px 10px 20px;
 }
 
@@ -81,6 +81,12 @@ input[type=submit] {
 input[type=text] {
     padding: 6px;
     width: 25%;
+    margin-bottom: .125rem;
+}
+
+input[type=url] {
+    padding: 6px;
+    width: 25%;
 }
 
 footer {
@@ -101,4 +107,13 @@ footer {
     width: 100%;
     padding: .15rem 0px;
     text-align: center;
+}
+
+button {
+    border-radius: 10px;
+    border-width: 0px;
+    padding: 8px 24px;
+    margin-bottom: .5rem;
+    background-color: var(--icims_primary_teal);
+    color: var(--icims_primary_white);
 }
