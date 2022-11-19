@@ -36,6 +36,8 @@ p {
     background-color: var(--icims_primary_teal);
     text-align: center;
     font-size: 1.8em;
+    position: sticky;
+    top: 0;
 }
 
 #noticebar > p {
@@ -90,7 +92,7 @@ input[type=url] {
 }
 
 footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     height: auto;
