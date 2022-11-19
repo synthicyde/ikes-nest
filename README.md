@@ -21,6 +21,9 @@ To download nightly builds:
 - Custom Salesforce auto-text
 
 ## Version notes
+### 0.3.3.1 Nightly
+- Added new flag to prevent full init on update
+
 ### 0.3.3.0
 - Added LinkedIn RSC link to list
 - Removed unnecessary permissions from manifest.json for faster validation
