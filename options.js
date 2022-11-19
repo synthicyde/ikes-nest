@@ -1,3 +1,4 @@
+//variables for functions
 const bookingsLink = document.getElementById("bookings_form");
 const inputText = document.createElement("input");
 const inputUrl = document.createElement("input");
@@ -7,8 +8,10 @@ const plus = document.getElementById("plus_btn");
 const minus = document.getElementById("minu_btn");
 const linkForm = document.getElementById("care_links");
 
+// important for calling into add and sub function
 let formNum = 0;
 
+// Function for building the data for HTML elements to be built
 function setUpLinks(number) {
 	inputText.id = "name_" + number;
 	inputText.type = "text";
@@ -17,6 +20,7 @@ function setUpLinks(number) {
 	br.setAttribute("class", "br_" + number);
 };
 
+// Function to push the HTML elements from setUpLinks() to the DOM
 function postLinks() {
 	targetDiv.appendChild(inputText.cloneNode(true));
 	targetDiv.appendChild(br.cloneNode(true));
@@ -25,36 +29,7 @@ function postLinks() {
 	targetDiv.appendChild(br.cloneNode(true));
 };
 
-bookingsLink.addEventListener("submit", (submission) => {
-	submission.preventDefault();
-	let saveLink = document.getElementById("bookings").value;
-	let moveLink = {link: saveLink};
-	// console.log(moveLink);
-	chrome.storage.sync.set({"storedUserBookings": moveLink});
-	alert("Bookings link saved.")
-});
-
-window.onload = () => {
-	console.log("Page reload.");
-	chrome.storage.sync.get(["storedUserBookings"], function(result) {
-		let userBookings = result.storedUserBookings.link;
-		// console.log(userBookings);
-		document.getElementById("bookings").setAttribute("value", userBookings);
-	});
-	chrome.storage.sync.get(["storedUserLinks"], function(result) {
-		// console.log(result.storedUserLinks);
-		let userLinks = result.storedUserLinks;
-		// console.log(userLinks.length);
-		formNum = userLinks.length;
-		for (let i = 0; i < userLinks.length; i++) {
-			setUpLinks(i);
-			inputText.value = userLinks[i].ArticleName;
-			inputUrl.value = userLinks[i].ArticleURL;
-			postLinks();
-		}
-	});
-};
-
+// Plus button functionality
 plus.addEventListener("click", () => {
 	setUpLinks(formNum);
 	inputText.value = "";
@@ -63,6 +38,7 @@ plus.addEventListener("click", () => {
 	formNum++
 });
 
+// Minus button functionality
 minus.addEventListener("click", () => {
 	if (formNum > 0) {
 		formNum--;
@@ -75,25 +51,46 @@ minus.addEventListener("click", () => {
 	}
 });
 
+// Functionality for Update button for Community LInks form
 linkForm.addEventListener("submit", (submission) => {
 	submission.preventDefault();
-	// console.log(submission);
 	let storeAray = [];
-	// console.log(formNum, tempAray, tempObj);
 	for (let i = 0; i < formNum; i++) {
 		let tempObj = {};
 		let submitText = document.getElementById("name_" + i).value;
 		let submitUrl = document.getElementById("link_" + i).value;
-		// console.log(submitText, submitUrl);
 		tempObj["ArticleName"] = submitText;
 		tempObj["ArticleURL"] = submitUrl;
 		tempObj["target"] = "_blank";
-		// console.log(tempObj);
 		storeAray.push(tempObj);
 	};
-	// console.log(tempAray);
 	chrome.storage.sync.set({"storedUserLinks": storeAray});
-	// chrome.storage.sync.get(["storedUserLinks"], function(result) {
-	// 	console.log(result.storedUserLinks);
-	// });
 });
+
+// Submit button for Bookings Link
+bookingsLink.addEventListener("submit", (submission) => {
+	submission.preventDefault();
+	let saveLink = document.getElementById("bookings").value;
+	let moveLink = {link: saveLink};
+	chrome.storage.sync.set({"storedUserBookings": moveLink});
+	alert("Bookings link saved.")
+});
+
+// Code to run when the Options Page is loaded
+window.onload = () => {
+	console.log("Page reload.");
+	chrome.storage.sync.get(["storedUserBookings"], function(result) {
+		let userBookings = result.storedUserBookings.link;
+		document.getElementById("bookings").setAttribute("value", userBookings);
+	});
+	chrome.storage.sync.get(["storedUserLinks"], function(result) {
+		let userLinks = result.storedUserLinks;
+		formNum = userLinks.length;
+		for (let i = 0; i < userLinks.length; i++) {
+			setUpLinks(i);
+			inputText.value = userLinks[i].ArticleName;
+			inputUrl.value = userLinks[i].ArticleURL;
+			postLinks();
+		}
+	});
+};
