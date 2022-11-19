@@ -66,7 +66,7 @@ function initInstallFlag() {
 chrome.runtime.onInstalled.addListener(() => {
 	console.log("Ike's nest has been built on a branch.");
 	chrome.storage.sync.get(["alreadyInstalled"], function(result) {
-		if (result.alreadyInstalled = undefined) {
+		if (result.alreadyInstalled === undefined) {
 			initCareLinksSync();
 			initBookingsLinkSync();
 			initPortalPassSync();
