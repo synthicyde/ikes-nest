@@ -21,11 +21,12 @@ To download nightly builds:
 - Custom Salesforce auto-text
 
 ## Version notes
-### 0.3.3.2 - Nightly
+### 0.3.4.0
 - User links modifiable on options page
-
-### 0.3.3.1 - Nightly
 - Added new flag to prevent full init on update
+- Cleaned and commented out js
+- Reduced sized in pop-up logos
+- Improved options page CSS
 
 ### 0.3.3.0
 - Added LinkedIn RSC link to list

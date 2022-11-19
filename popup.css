@@ -31,9 +31,8 @@ img:hover {
 }
 
 #logo {
-  /* padding-left: 10px;
-  padding-top: 10px; */
-  margin-left: 10px;
+  box-sizing: border-box;
+  padding: 5px 0px 5px 10px;
 }
 
 .links {
