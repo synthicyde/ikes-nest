@@ -59,9 +59,18 @@ function initPortalPassSync() {
 	chrome.storage.sync.set({"storedUserPortalPass": initPortalPass});
 };
 
+function initInstallFlag() {
+	chrome.storage.sync.set({"alreadyInstalled": true});
+}
+
 chrome.runtime.onInstalled.addListener(() => {
 	console.log("Ike's nest has been built on a branch.");
-	initCareLinksSync();
-	initBookingsLinkSync();
-	initPortalPassSync();
+	chrome.storage.sync.get(["alreadyInstalled"], function(result) {
+		if (result.alreadyInstalled = undefined) {
+			initCareLinksSync();
+			initBookingsLinkSync();
+			initPortalPassSync();
+			initInstallFlag();
+		}
+	});
 });
