@@ -16,6 +16,7 @@
 body {
 	font-family: var(--icims_font_family);
 	width: 300px;
+  height: fit-content;
 }
 
 #images {
@@ -31,8 +32,13 @@ img:hover {
 }
 
 #logo {
-  padding-left: 10px;
-  padding-top: 10px;
+  padding-left: 0px;
+  padding-top: 0px;
+  margin-left: 5px;
+}
+
+#ike_button {
+  margin-right: 5px;
 }
 
 .links {
@@ -48,6 +54,7 @@ ul {
 h1 {
   margin: 0px;
   margin-top: 5px;
+  font-size: 1.5em;
 }
 
 a {
@@ -124,7 +131,8 @@ input[type=text] {
 input[type=submit] {
   border-radius: 10px;
   border-width: 0px;
-  padding: 8px 24px;
+  /* padding: 8px 24px; */
   background-color: var(--icims_primary_teal);
   color: var(--icims_primary_white);
+  width: 25%;
 }

@@ -77,3 +77,9 @@ portalPassSave.addEventListener("submit", (submission) => {
 	console.log(movePass);
 	chrome.storage.sync.set({"storedUserPortalPass": movePass});
 });
+
+document.getElementById("search_care_site_form").addEventListener("submit", () => {
+	chrome.tabs.create({
+		url: "https://care.icims.com/s/global-search/" + document.getElementById("search_query").value
+	})
+});
