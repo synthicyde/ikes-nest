@@ -82,3 +82,18 @@ window.onload = () => {
 		};
 	});
 };
+
+//Saves the portal password
+portalPassSave.addEventListener("submit", (submission) => {
+	let savePass = document.getElementById("portal_pass").value;
+	let movePass = {password: savePass};
+	console.log(movePass);
+	chrome.storage.sync.set({"storedUserPortalPass": movePass});
+});
+
+//Searches iCIMS Care Site
+document.getElementById("search_care_site_form").addEventListener("submit", () => {
+	chrome.tabs.create({
+		url: "https://care.icims.com/s/global-search/" + document.getElementById("search_query").value
+	})
+});
