@@ -5,6 +5,7 @@ const a = document.createElement("a");
 const h1 = document.createElement("h1");
 const p = document.createElement("p");
 const portalPassSave = document.getElementById("portal_pass_form");
+// const newversion = document.getElementById("newversionnotif");
 
 // Let's the logos at the top lead to the care site
 ike_button.addEventListener("click", async () => {
@@ -83,3 +84,10 @@ document.getElementById("search_care_site_form").addEventListener("submit", () =
 		url: "https://care.icims.com/s/global-search/" + document.getElementById("search_query").value
 	})
 });
+
+// document.addEventListener("click", () => {
+// 	newversion.style.opacity = 0;
+// 	setTimeout(() => {
+// 		newversion.remove();
+// 	}, 150)
+// });
