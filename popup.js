@@ -5,7 +5,6 @@ const a = document.createElement("a");
 const h1 = document.createElement("h1");
 const p = document.createElement("p");
 const portalPassSave = document.getElementById("portal_pass_form");
-// const newversion = document.getElementById("newversionnotif");
 
 let userLinks = [];
 
