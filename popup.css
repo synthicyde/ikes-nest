@@ -32,13 +32,8 @@ img:hover {
 }
 
 #logo {
-  padding-left: 0px;
-  padding-top: 0px;
-  margin-left: 5px;
-}
-
-#ike_button {
-  margin-right: 5px;
+  box-sizing: border-box;
+  padding: 5px 0px 5px 10px;
 }
 
 .links {
