@@ -21,6 +21,9 @@ To download nightly builds:
 - Custom Salesforce auto-text
 
 ## Version notes
+### 0.3.5.1
+- Changed "Other Link" to "Other Links" in pop-up
+
 ### 0.3.5.0
 - Added the ability to search the iCIMS Care Site from the pop-up
 
