@@ -21,6 +21,9 @@ To download nightly builds:
 - Custom Salesforce auto-text
 
 ## Version notes
+### 0.3.6.0
+- Fixed links for Community Site update
+
 ### 0.3.5.1
 - Changed "Other Link" to "Other Links" in pop-up
 

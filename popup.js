@@ -11,13 +11,13 @@ let userLinks = [];
 // Let's the logos at the top lead to the care site
 ike_button.addEventListener("click", async () => {
     chrome.tabs.create({
-	    url: "https://care.icims.com/s/"
+	    url: "https://community.icims.com/s/"
 	})
 });
 
 logo.addEventListener("click", async () => {
 	chrome.tabs.create({
-		url: "https://care.icims.com/s/"
+		url: "https://community.icims.com/s/"
 	})
 });
 
@@ -94,6 +94,6 @@ portalPassSave.addEventListener("submit", (submission) => {
 //Searches iCIMS Care Site
 document.getElementById("search_care_site_form").addEventListener("submit", () => {
 	chrome.tabs.create({
-		url: "https://care.icims.com/s/global-search/" + document.getElementById("search_query").value
+		url: "https://community.icims.com/s/global-search/" + document.getElementById("search_query").value
 	})
 });

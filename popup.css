@@ -132,6 +132,15 @@ input[type=submit] {
   width: 25%;
 }
 
+input[type=submit]:hover {
+  border-radius: 10px;
+  border-width: 0px;
+  /* padding: 8px 24px; */
+  background-color: var(--icims_tinted_teal);
+  color: var(--icims_primary_white);
+  width: 25%;
+}
+
 #search_care_site {
   margin-top: 5px;
 }
